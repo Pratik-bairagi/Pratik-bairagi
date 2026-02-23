@@ -1,8 +1,8 @@
-$.get("/assets/html/navigation.html", function(data){
+$.get("assets/html/navigation.html", function(data){
     $("#navbar").replaceWith(data);
 });
 
-$.get("/assets/html/loader.html", function(data){
+$.get("assets/html/loader.html", function(data){
   $("#loading").replaceWith(data);
 });
 $(window).on('load', function(){
@@ -146,3 +146,4 @@ let progress = document.getElementById('progressbar');
             }
 
         }
+
