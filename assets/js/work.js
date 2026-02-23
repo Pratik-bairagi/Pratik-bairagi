@@ -1,8 +1,8 @@
-$.get("/assets/html/navigation.html", function(data){
+$.get("assets/html/navigation.html", function(data){
     $("#navbar").replaceWith(data);
 });
 
-$.get("/assets/html/loader.html", function(data){
+$.get("assets/html/loader.html", function(data){
     $("#loading").replaceWith(data);
   });
   $(window).on('load', function(){
@@ -138,5 +138,6 @@ swiper.on('slideChangeTransitionEnd', function () {
     bg.style.height = height + 'px';
     bg.style.transform = 'translateX(' + x + 'px ) translateY(' + y + 'px)';
 });
+
 
 
