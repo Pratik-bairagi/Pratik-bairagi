@@ -1,5 +1,5 @@
-@import url(/assets/css/navbar.css);
-@import url(/assets/css/loader.css);
+@import url(assets/css/navbar.css);
+@import url(assets/css/loader.css);
 
 .about {
     background: var(--blue-color);
@@ -848,3 +848,4 @@ body::-webkit-scrollbar-thumb {
     font-size: 16px;
   }
 }
+
