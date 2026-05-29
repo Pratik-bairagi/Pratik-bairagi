@@ -1,10 +1,13 @@
-$.get("assets/html/navigation.html", function(data){
+// Paths Fixed
+$.get("/Pratik-bairagi/assets/html/navigation.html", function(data){
     $("#navbar").replaceWith(data);
 });
 
-$.get("assets/html/loader.html", function(data){
+$.get("/Pratik-bairagi/assets/html/loader.html", function(data){
     $("#loading").replaceWith(data);
   });
+  
+// Baaki ka code same hai
   $(window).on('load', function(){
     setTimeout(removeLoader, 2000); //wait for page load PLUS two seconds.
   });
@@ -138,6 +141,3 @@ swiper.on('slideChangeTransitionEnd', function () {
     bg.style.height = height + 'px';
     bg.style.transform = 'translateX(' + x + 'px ) translateY(' + y + 'px)';
 });
-
-
-
