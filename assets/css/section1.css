@@ -119,7 +119,7 @@ animation: bounce-in-bottom 1.2s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 
 .box-bounce {
 transform: scaleY(1) translateY(0px);
-transform-origin: 50% 100%;
+transform-origin: 100% 100%;
 transition: .2s ease-in-out;
 }
 .text-bounce {
