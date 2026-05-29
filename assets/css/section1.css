@@ -15,9 +15,8 @@
   font-family:'Poppins', sans-serif;
   display: grid;
   grid-template-columns: 55% auto;
-  /* Navbar ke neeche jagah banane ke liye margin badhaya hai */
-  margin-top: 15vh; 
-  padding-top: 50px;
+  /* Sirf 120px ka margin diya hai taaki exact navbar ke neeche aaye */
+  margin-top: 120px; 
 }
 
 .boxes {
@@ -328,8 +327,8 @@ cursor: default;
 
   .section1 {
     grid-template-columns: auto;
-    /* Mobile ke liye extra margin taaki text aur saf ho */
-    margin-top: 18vh; 
+    /* Mobile ke liye exact 100px rakha hai taaki bloated na lage */
+    margin-top: 100px; 
   }
 
   .animated_title {
