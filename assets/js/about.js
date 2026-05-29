@@ -1,10 +1,13 @@
-$.get("assets/html/navigation.html", function(data){
+// Yahan paths fix kar diye hain
+$.get("/Pratik-bairagi/assets/html/navigation.html", function(data){
     $("#navbar").replaceWith(data);
 });
 
-$.get("assets/html/loader.html", function(data){
+$.get("/Pratik-bairagi/assets/html/loader.html", function(data){
   $("#loading").replaceWith(data);
 });
+
+// Yahan se neeche ka code wahi hai
 $(window).on('load', function(){
   setTimeout(removeLoader, 2000); //wait for page load PLUS two seconds.
 });
@@ -146,4 +149,3 @@ let progress = document.getElementById('progressbar');
             }
 
         }
-
