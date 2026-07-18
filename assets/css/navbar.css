@@ -39,8 +39,8 @@ body * {
 
 .nav_links {
     display: flex;
-    justify-content: flex-end; /* Groups items closer on desktop */
-    gap: 20px; /* Controls exact spacing between links */
+    justify-content: flex-end; /* Desktop view: Groups items to the right */
+    gap: 20px; /* Desktop view: Controls horizontal spacing between links */
     width: 45%;
     right: 5%;
     position: absolute;
@@ -107,7 +107,6 @@ body * {
 }
 
 @media only screen and (max-width: 1440px) {
-    
     .logo {
        right: 40%;
     }
@@ -120,7 +119,6 @@ body * {
 }
 
 @media only screen and (max-width: 1024px) {
-
     .logo {
         right: 30%;
     }
@@ -132,7 +130,6 @@ body * {
 }
 
 @media only screen and (max-width: 991px) {
-
     .logo {
         right: 25%;
     }
@@ -144,7 +141,6 @@ body * {
 }
 
 @media only screen and (max-width: 820px) {
-
     .logo {
         right: 35%;
     }
@@ -174,8 +170,12 @@ body * {
         transform: translateX(100%);
         display: flex;
         flex-direction: column;
-        justify-content: space-around; /* Resets spacing for mobile view */
-        gap: 0; /* Removes the desktop gap */
+        
+        /* THE FIX FOR MOBILE IS HERE */
+        justify-content: flex-start; /* Aligns links to the top */
+        gap: 15px; /* Adds a consistent, small space between links */
+        padding-top: 40px; /* Gives a little breathing room at the top of the menu */
+        
         padding: 15px;
         padding-left: 10px;
         margin: 0px;
@@ -196,11 +196,11 @@ body * {
         letter-spacing: 3px;
         font-size: 1.5rem;
         font-weight: 600;
-        padding: 15px 8px;
+        padding: 15px 8px; /* You can reduce '15px' to '10px' here if you want them even closer */
         border-radius: 7px;
         display: block;
         transition: all 0.4s ease;
-    }
+        }
     
     .logo {
         right: 0%;
@@ -230,7 +230,6 @@ body * {
 }
 
 @media only screen and (max-width: 576px) {
-
     .nav_box {
         width: 93.5%;
     }
@@ -245,21 +244,18 @@ body * {
 }
 
 @media only screen and (max-width: 480px) {
-
     .nav_box {
         width: 92%;
     }
 }
 
 @media only screen and (max-width: 420px) {
-
     .nav_box {
         width: 91%;
     }
 }
 
 @media only screen and (max-width: 360px) {
-
     .nav_box {
         width: 90%;
     }
