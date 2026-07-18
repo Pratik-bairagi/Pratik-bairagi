@@ -327,8 +327,8 @@ cursor: default;
 
   .section1 {
     grid-template-columns: auto;
-    /* Mobile ke liye exact 100px rakha hai taaki bloated na lage */
-    margin-top: 100px; 
+    /* REDUCED FROM 100px TO 60px TO BRING TEXT UP */
+    margin-top: 60px; 
   }
 
   .animated_title {
