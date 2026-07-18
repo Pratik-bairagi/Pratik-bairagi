@@ -39,8 +39,8 @@ body * {
 
 .nav_links {
     display: flex;
-    justify-content: flex-end; /* Desktop view: Groups items to the right */
-    gap: 20px; /* Desktop view: Controls horizontal spacing between links */
+    justify-content: flex-end;
+    gap: 20px; 
     width: 45%;
     right: 5%;
     position: absolute;
@@ -84,23 +84,6 @@ body * {
 .burger {
     display: none;
 }
-
-/*.button {
-    border: none;
-    outline: none;
-    background: none;
-    cursor: pointer;
-}
-
-.fa-sun-o {
-    font-size: 22px;
-    color: var(--yellow-color);
-}
-
-.fa-moon-o {
-    font-size: 22px;
-    color: var(--blue-color);
-}*/
 
 #click {
     display: none;
@@ -171,10 +154,9 @@ body * {
         display: flex;
         flex-direction: column;
         
-        /* THE FIX FOR MOBILE IS HERE */
-        justify-content: flex-start; /* Aligns links to the top */
-        gap: 15px; /* Adds a consistent, small space between links */
-        padding-top: 40px; /* Gives a little breathing room at the top of the menu */
+        justify-content: flex-start;
+        gap: 5px; /* LOWERED: Brings items closer together */
+        padding-top: 40px; 
         
         padding: 15px;
         padding-left: 10px;
@@ -196,11 +178,14 @@ body * {
         letter-spacing: 3px;
         font-size: 1.5rem;
         font-weight: 600;
-        padding: 15px 8px; /* You can reduce '15px' to '10px' here if you want them even closer */
+        
+        /* LOWERED PADDING: Changed from 15px to 5px to remove extra vertical height */
+        padding: 5px 8px; 
+        
         border-radius: 7px;
         display: block;
         transition: all 0.4s ease;
-        }
+    }
     
     .logo {
         right: 0%;
