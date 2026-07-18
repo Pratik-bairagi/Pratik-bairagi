@@ -1,10 +1,10 @@
 :root {
-        --back-color: white;
-        --red-color: rgb(234, 67, 53);
-        --yellow-color: rgb(251, 188, 5);
-        --blue-color: rgb(66, 133, 244);
-        --green-color: rgb(52, 168, 83);
-        --font-hover: white;
+    --back-color: white;
+    --red-color: rgb(234, 67, 53);
+    --yellow-color: rgb(251, 188, 5);
+    --blue-color: rgb(66, 133, 244);
+    --green-color: rgb(52, 168, 83);
+    --font-hover: white;
 }
 
 html,
@@ -39,7 +39,8 @@ body * {
 
 .nav_links {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end; /* Changed from space-around */
+    gap: 20px; /* Added gap to control the spacing between links */
     width: 45%;
     right: 5%;
     position: absolute;
@@ -51,7 +52,7 @@ body * {
     letter-spacing: 3px;
     font-size: 20px;
     font-weight: 600;
-    padding: 13px 10px;
+    padding: 13px 10px; /* You can reduce the 10px to 5px if you want them even tighter */
     border-radius: 7px;
     transition: all 0.4s ease;
 }
