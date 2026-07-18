@@ -39,7 +39,7 @@ body * {
 
 .nav_links {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end; 
     gap: 20px; 
     width: 45%;
     right: 5%;
@@ -84,6 +84,23 @@ body * {
 .burger {
     display: none;
 }
+
+/*.button {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+.fa-sun-o {
+    font-size: 22px;
+    color: var(--yellow-color);
+}
+
+.fa-moon-o {
+    font-size: 22px;
+    color: var(--blue-color);
+}*/
 
 #click {
     display: none;
@@ -144,22 +161,19 @@ body * {
         content: "\f00d";
         color: var(--red-color);
     }
+    
     .nav_links {
         position: fixed;
         right: 0px;
         top: 15%;
-        height: 75%;
+        height: auto; /* Shrinks the background box to fit the content */
         width: 77%;
         transform: translateX(100%);
         display: flex;
         flex-direction: column;
-        
         justify-content: flex-start;
-        gap: 5px; /* LOWERED: Brings items closer together */
-        padding-top: 40px; 
-        
-        padding: 15px;
-        padding-left: 10px;
+        gap: 5px; /* Keeps the links close together */
+        padding: 40px 15px 30px 10px; /* Top, Right, Bottom, Left padding */
         margin: 0px;
         background-color: rgba(245, 245, 245, 1);
         transition: all 0.4s ease-in;
@@ -178,10 +192,7 @@ body * {
         letter-spacing: 3px;
         font-size: 1.5rem;
         font-weight: 600;
-        
-        /* LOWERED PADDING: Changed from 15px to 5px to remove extra vertical height */
-        padding: 5px 8px; 
-        
+        padding: 5px 8px; /* Reduced vertical padding for tighter links */
         border-radius: 7px;
         display: block;
         transition: all 0.4s ease;
