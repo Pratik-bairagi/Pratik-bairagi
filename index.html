@@ -99,7 +99,18 @@
     .para_aboutme p.description, 
     .para_aboutme p.description_phone {
       text-align: justify !important;
-      margin-right: 30px !important; /* Thoda sa margin badha diya */
+      margin-right: 30px !important;
+    }
+
+    /* SECTION 4 FIX: Prevents text cut-off & Justifies the paragraph */
+    .content4, .para_myskills {
+      height: auto !important;
+      overflow: visible !important;
+      min-height: min-content !important;
+    }
+    .para_myskills p.description_skills {
+      padding-bottom: 20px !important;
+      text-align: justify !important; /* Added Justify for Section 4 */
     }
   </style>
 </head>
