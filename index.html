@@ -13,21 +13,21 @@
 
     gtag('config', 'UA-206103165-1');
   </script>
-  <link rel="shortcut icon" href="/Pratik-bairagi/assets/images/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
   
   <link rel="stylesheet" href="assets/css/cursor.css">
-  <link rel="stylesheet" href="/Pratik-bairagi/assets/css/navbar.css">
-  <link rel="stylesheet" href="/Pratik-bairagi/assets/css/section1.css">
-  <link rel="stylesheet" href="/Pratik-bairagi/assets/css/section2.css">
-  <link rel="stylesheet" href="/Pratik-bairagi/assets/css/section3.css">
-  <link rel="stylesheet" href="/Pratik-bairagi/assets/css/section4.css">
-  <link rel="stylesheet" href="/Pratik-bairagi/assets/css/section5.css">
-  <link rel="stylesheet" href="/Pratik-bairagi/assets/css/section6.css">
-  <link rel="stylesheet" href="/Pratik-bairagi/assets/css/section7.css">
-  <link rel="stylesheet" href="/Pratik-bairagi/assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/navbar.css">
+  <link rel="stylesheet" href="assets/css/section1.css">
+  <link rel="stylesheet" href="assets/css/section2.css">
+  <link rel="stylesheet" href="assets/css/section3.css">
+  <link rel="stylesheet" href="assets/css/section4.css">
+  <link rel="stylesheet" href="assets/css/section5.css">
+  <link rel="stylesheet" href="assets/css/section6.css">
+  <link rel="stylesheet" href="assets/css/section7.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
   
   <script src="https://kit.fontawesome.com/5c099e467f.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -35,7 +35,7 @@
   <title>Pratik Bairagi - Portfolio</title>
 
   <style>
-    /* Mobile Layout Fix */
+    /* Fixed missing bracket for mobile layout */
     @media (max-width: 768px) {
       .nav_box .burger { display: none !important; }
       #click { display: none !important; }
@@ -53,35 +53,28 @@
       .nav_box .nav_links a { font-size: 1rem; padding: 10px 12px; }
     }
 
-    /* Desktop Layout */
+    /* Desktop layout */
     .nav_box {
       display: flex !important; 
       justify-content: space-between !important;
       align-items: center !important;
-      padding: 0 20px;
-      width: 100%;
-      box-sizing: border-box; /* Keeps everything inside the screen */
+      padding: 0 20px !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
     }
-
-    /* THIS FIXES THE 100% DESKTOP ISSUE */
+    
     .nav_box .logo { 
       margin-left: 0 !important; 
       transform: none !important; 
-      position: static !important;
     }
 
-    /* Resume Button */
-    .nav_box .nav_links { margin-left: auto !important; gap: 18px; align-items: center; }
-    .nav_box .nav_links a.buttonDownload { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius:8px; text-decoration:none; color:inherit; font-weight: 500;}
-    .nav_box .nav_links a.buttonDownload i { font-size:18px; }
-  </style>
-
-    /* Ensure spacing between logo and download icon on all viewports for this page */
-    .nav_box {
-      justify-content: space-between !important;
-      padding: 0 20px;
+    /* FIX FOR GIANT LOGO: Locks the image to a normal navbar height */
+    .nav_box .logo img { 
+      height: 45px !important; 
+      width: auto !important; 
+      display: block !important; 
     }
-    .nav_box .logo { margin-right: 20px; }
+
     .nav_box .nav_links { margin-left: auto !important; gap: 18px; align-items: center; }
     .nav_box .nav_links a.buttonDownload { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius:8px; text-decoration:none; color:inherit; font-weight: 500;}
     .nav_box .nav_links a.buttonDownload i { font-size:18px; }
@@ -96,14 +89,14 @@
     <!-- Top bar with logo and resume download button -->
     <nav class="nav_box" data-aos="fade-down" data-aos-duration="700">
       <div class="logo">
-        <a href="/Pratik-bairagi/index.html"><img src="/Pratik-bairagi/assets/images/logo.png" alt="Portfolio Logo"></a>
+        <a href="index.html"><img src="assets/images/logo.png" alt="Portfolio Logo"></a>
       </div>
       <input type="checkbox" id="click">
       <label for="click" class="burger">
         <i class="fas fa-bars" aria-hidden="true"></i>
       </label>
       <div class="nav_links">
-       <a href="/Pratik-bairagi/assets/Resume.pdf" target="_blank" class="buttonDownload" download title="Download Resume" aria-label="Download Resume">
+       <a href="assets/Resume.pdf" target="_blank" class="buttonDownload" download title="Download Resume" aria-label="Download Resume">
           <span>Resume</span> <i class="fas fa-download" aria-hidden="true"></i> 
         </a>
       </div>
@@ -174,7 +167,7 @@
         <circle class="layer" data-speed="-9" cx="909" cy="395" r="10" fill="#7FBC00" />
         <circle class="layer" data-speed="-2" cx="328" cy="184" r="16" fill="#4285F4" />
       </svg>
-      <img class="self layer" data-speed="-5" src="/Pratik-bairagi/assets/images/asmit.png">
+      <img class="self layer" data-speed="-5" src="assets/images/asmit.png">
       <svg viewBox="0 0 355 343" fill="none" class="circles_phone">
         <circle class="bounce-in-bottom2" cx="203.5" cy="151.5" r="151.5" fill="#34A853" />
         <circle class="bounce-in-bottom3" cx="91" cy="245" r="55" fill="#FBBC05" />
@@ -256,7 +249,7 @@
       <p class="description_skills">I am an educator with over 5 years of teaching experience across university, college, and institute levels. I hold an MCA and a BSc degree, and I am proudly UGC NET qualified during my master in first attempt.<br><br>
         My core passion lies in academia and research. I specialize in breaking down complex technical subjects into digestible knowledge for my students. Beyond the standard computer science curriculum, I am deeply involved in exploring and teaching advanced paradigms like Quantum Computing and Cloud Systems.<br><br>
         Whether it's inside the classroom or mentoring students for competitive coding, I believe in structured learning and impactful teaching. <i class="fas fa-graduation-cap" aria-hidden="true"></i><br><br>
-        Visit my <a class="myskill_links" href="#" target="_blank">LinkedIn</a> profile for more details or just <a class="myskill_links" href="/Pratik-bairagi/assets/html/contact.html">contact</a> me.
+        Visit my <a class="myskill_links" href="#" target="_blank">LinkedIn</a> profile for more details or just <a class="myskill_links" href="assets/html/contact.html">contact</a> me.
       </p>
     </div>
   </div>
@@ -279,7 +272,7 @@
                   many JavaScript libraries for animation and cool effects.
                 </p>
                 <div class="project__img">
-                  <img src="/Pratik-bairagi/assets/images/logo bg.png" alt="project">
+                  <img src="assets/images/logo bg.png" alt="project">
                 </div>
               </a>
             </div>
@@ -294,7 +287,7 @@
                   It uses OpenWeatherMap and OpenCageData APIs.
                 </p>
                 <div class="project__img">
-                  <img src="/Pratik-bairagi/assets/images/weatherapp.png" alt="project">
+                  <img src="assets/images/weatherapp.png" alt="project">
                 </div>
               </a>
             </div>
@@ -309,7 +302,7 @@
                   consists the front-end part of Hulu website.
                 </p>
                 <div class="project__img">
-                  <img src="/Pratik-bairagi/assets/images/hulu.jpg" alt="project">
+                  <img src="assets/images/hulu.jpg" alt="project">
                 </div>
               </a>
             </div>
@@ -324,7 +317,7 @@
                   videos, webcam feed, shapes, colors, faces, and vehicle number plates.
                 </p>
                 <div class="project__img">
-                  <img src="/Pratik-bairagi/assets/images/mini-c++.png" alt="project">
+                  <img src="assets/images/mini-c++.png" alt="project">
                 </div>
               </a>
             </div>
@@ -339,7 +332,7 @@
                   Initially the game was coded on Replit, so checkout that game directly here.
                 </p>
                 <div class="project__img">
-                  <img src="/Pratik-bairagi/assets/images/flappy.jpg" alt="project">
+                  <img src="assets/images/flappy.jpg" alt="project">
                 </div>
               </a>
             </div>
@@ -353,7 +346,7 @@
                   Realtime chat app with websockets using HTML, CSS, Node.js, Express and Socket.io with Vanilla JS on the frontend with a custom UI.
                 </p>
                 <div class="project__img">
-                  <img src="/Pratik-bairagi/assets/images/msgbyte.png" alt="project">
+                  <img src="assets/images/msgbyte.png" alt="project">
                 </div>
               </a>
             </div>
@@ -386,7 +379,7 @@
     </div>
     <div data-aos="fade-right" data-aos-once="true" class="learn_more">
       <div class="learn_btn">
-          <a href="/Pratik-bairagi/assets/html/work.html" target="_self" class="buttonLearn">Learn More</a>
+          <a href="assets/html/work.html" target="_self" class="buttonLearn">Learn More</a>
       </div>
    </div>
 
@@ -500,7 +493,7 @@
     </div>
     <div data-aos="fade-right" data-aos-once="true" class="read_more">
       <div class="read_btn">
-          <a href="/Pratik-bairagi/assets/html/blog.html" target="_self" class="buttonRead">Read More</a>     
+          <a href="assets/html/blog.html" target="_self" class="buttonRead">Read More</a>     
       </div>
    </div>
   </div>
@@ -615,19 +608,18 @@
     </div>
   </footer>
 
-  <script src="/Pratik-bairagi/assets/js/TagCloud.min.js"></script>
+  <script src="assets/js/TagCloud.min.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-  <script src="/Pratik-bairagi/assets/js/cursor.js"></script>
-  <!-- <script src="/Pratik-bairagi/assets/js/index.js"></script> -->
-  <script src="/Pratik-bairagi/assets/js/nav.js"></script>
-  <script src="/Pratik-bairagi/assets/js/section1.js"></script>
-  <script src="/Pratik-bairagi/assets/js/section2.js"></script>
-  <script src="/Pratik-bairagi/assets/js/section3.js"></script>
-  <script src="/Pratik-bairagi/assets/js/section4.js"></script>
-  <script src="/Pratik-bairagi/assets/js/section5.js"></script>
-  <script src="/Pratik-bairagi/assets/js/section6.js"></script>
-  <script src="/Pratik-bairagi/assets/js/section7.js"></script>
+  <script src="assets/js/cursor.js"></script>
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/section1.js"></script>
+  <script src="assets/js/section2.js"></script>
+  <script src="assets/js/section3.js"></script>
+  <script src="assets/js/section4.js"></script>
+  <script src="assets/js/section5.js"></script>
+  <script src="assets/js/section6.js"></script>
+  <script src="assets/js/section7.js"></script>
 </body>
 
 </html>
