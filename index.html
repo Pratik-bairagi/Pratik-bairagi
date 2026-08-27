@@ -48,13 +48,20 @@
     .nav_box .logo { 
       display: block !important;
       flex: 0 0 auto !important; 
-      margin-right: auto !important; /* This pushes the logo left and the button right */
+      margin-right: auto !important; /* Pushes the logo left and the button right */
     }
     
+    .nav_box .logo a {
+      display: flex !important;
+      align-items: center !important;
+    }
+    
+    /* Forced sizes to prevent the logo from shrinking out of view */
     .nav_box .logo img {
       display: block !important;
-      max-height: 50px;
-      width: auto;
+      height: 40px !important; 
+      width: auto !important;
+      min-width: 40px !important;
     }
 
     /* Override mobile menu behaviors */
@@ -73,19 +80,19 @@
       padding: 0 !important;
     }
     
-    /* New Button Styles to fit Text and Icon */
+    /* Button Styles to fit Text and Icon */
     .nav_box .nav_links a.buttonDownload { 
       display: inline-flex !important; 
       align-items: center !important; 
       justify-content: center !important; 
-      gap: 8px !important; /* Spacing between icon and text */
+      gap: 8px !important; 
       padding: 8px 16px !important; 
       border-radius: 8px !important; 
       text-decoration: none !important; 
       color: inherit !important; 
       font-size: 16px !important;
       font-weight: 500 !important;
-      white-space: nowrap !important; /* Prevents text from wrapping on small screens */
+      white-space: nowrap !important;
     }
     
     .nav_box .nav_links a.buttonDownload i { 
@@ -109,9 +116,8 @@
         <i class="fas fa-bars" aria-hidden="true"></i>
       </label>
       <div class="nav_links">
-      <a href="/Pratik-bairagi/assets/Resume.pdf" target="_blank" class="buttonDownload" download title="Download Resume" aria-label="Download Resume">
+       <a href="/Pratik-bairagi/assets/Resume.pdf" target="_blank" class="buttonDownload" download title="Download Resume" aria-label="Download Resume">
           <span>Resume</span> <i class="fas fa-download" aria-hidden="true"></i> 
-        </a>
         </a>
       </div>
     </nav>
@@ -238,7 +244,6 @@
       <div class="skill_container">
       <div id="progressbar"></div>
       <div class="skillbox">
-        <!-- SKILLS BARS KI HEADINGS CHANGE KI HAIN -->
         <p data-aos="fade-right" data-aos-once="true" class="sk">Teaching & Pedagogy</p>
         <div class="container" data-aos="fade-right">
           <div id="fe-bar"></div>
@@ -261,7 +266,6 @@
       </div>
     </div> 
     <div data-aos="fade-left" data-aos-duration="1200" data-aos-once="true" class="para_myskills">
-      <!-- PARAGRAPH POORA EDUCATOR WALA KAR DIYA HAI -->
       <p class="description_skills">I am an educator with over 5 years of teaching experience across university, college, and institute levels. I hold an MCA and a BSc degree, and I am proudly UGC NET qualified during my master in first attempt.<br><br>
         My core passion lies in academia and research. I specialize in breaking down complex technical subjects into digestible knowledge for my students. Beyond the standard computer science curriculum, I am deeply involved in exploring and teaching advanced paradigms like Quantum Computing and Cloud Systems.<br><br>
         Whether it's inside the classroom or mentoring students for competitive coding, I believe in structured learning and impactful teaching. <i class="fas fa-graduation-cap" aria-hidden="true"></i><br><br>
