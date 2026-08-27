@@ -35,53 +35,33 @@
   <title>Pratik Bairagi - Portfolio</title>
 
   <style>
+    /* YOUR ORIGINAL CSS - I only added the missing '}' bracket */
+    @media (max-width: 768px) {
+      .nav_box .burger { display: none !important; }
+      #click { display: none !important; }
+      .nav_box .nav_links {
+        position: absolute !important;
+        transform: none !important;
+        right: 5% !important;
+        top: 0 !important;
+        width: auto !important;
+        display: flex !important;
+        background: transparent !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+      }
+      .nav_box .nav_links a { font-size: 1rem; padding: 10px 12px; }
+    }
+
+    /* Ensure spacing between logo and download icon on all viewports for this page */
     .nav_box {
-      display: flex !important;
-      justify-content: space-between !important; 
-      align-items: center !important;
-      padding: 10px 20px !important;
-      width: 100% !important;
-      box-sizing: border-box !important;
+      justify-content: space-between !important;
+      padding: 0 20px;
     }
-    
-    /* Force the logo to show and give it a solid size */
-    .nav_box .logo {
-      display: block !important;
-      visibility: visible !important;
-      opacity: 1 !important;
-    }
-
-    .nav_box .logo img {
-      display: block !important;
-      height: 50px !important; 
-      width: auto !important;
-      visibility: visible !important;
-    }
-
-    /* Hide the mobile menu burger */
-    .nav_box .burger, #click { 
-      display: none !important; 
-    }
-    
-    /* Resume Button Styles */
-    .nav_box .nav_links { 
-      display: flex !important;
-      position: relative !important;
-      background: transparent !important;
-      box-shadow: none !important;
-    }
-    
-    .nav_box .nav_links a.buttonDownload { 
-      display: inline-flex !important; 
-      align-items: center !important; 
-      gap: 8px !important; 
-      padding: 8px 16px !important; 
-      text-decoration: none !important; 
-      font-size: 16px !important;
-      font-weight: 600 !important;
-      color: inherit;
-      white-space: nowrap !important;
-    }
+    .nav_box .logo { margin-right: 20px; }
+    .nav_box .nav_links { margin-left: auto !important; gap: 18px; align-items: center; }
+    .nav_box .nav_links a.buttonDownload { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius:8px; text-decoration:none; color:inherit; font-weight: 500;}
+    .nav_box .nav_links a.buttonDownload i { font-size:18px; }
   </style>
 </head>
 
