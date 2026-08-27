@@ -35,53 +35,52 @@
   <title>Pratik Bairagi - Portfolio</title>
 
   <style>
-    /* YOUR ORIGINAL CSS */
+    /* Hide the mobile menu burger entirely */
     @media (max-width: 768px) {
-      .nav_box .burger { display: none !important; }
-      #click { display: none !important; }
-      .nav_box .nav_links {
-        position: absolute !important;
-        transform: none !important;
-        right: 5% !important;
-        top: 0 !important;
-        width: auto !important;
-        display: flex !important;
-        background: transparent !important;
-        padding: 0 !important;
-        box-shadow: none !important;
-      }
-      .nav_box .nav_links a { font-size: 1rem; padding: 10px 12px; }
+      .nav_box .burger, #click { display: none !important; }
     }
 
+    /* Navbar Container */
     .nav_box {
-      display: flex !important;
-      justify-content: space-between !important; 
+      display: flex !important; 
+      justify-content: space-between !important;
       align-items: center !important;
-      padding: 10px 20px !important;
+      padding: 15px 40px !important;
       width: 100% !important;
       box-sizing: border-box !important;
     }
-    
-    .nav_box .logo {
-      display: block !important;
+
+    /* SOLID LOGO FIX: Stops navbar.css from hiding or moving the logo */
+    .nav_box .logo, 
+    .nav_box .logo a { 
+      display: flex !important;
+      align-items: center !important;
+      position: static !important; 
+      margin: 0 !important; 
+      padding: 0 !important;
+      transform: none !important; 
+      left: auto !important;
       visibility: visible !important;
       opacity: 1 !important;
     }
 
-    .nav_box .logo img {
-      display: block !important;
-      height: 50px !important; 
-      width: auto !important;
+    .nav_box .logo img { 
+      display: block !important; 
+      height: 45px !important; 
+      width: auto !important; 
+      position: static !important;
+      margin: 0 !important;
+      transform: none !important;
       visibility: visible !important;
+      opacity: 1 !important;
     }
 
-    .nav_box .burger, #click { 
-      display: none !important; 
-    }
-    
+    /* Keep the Resume button on the right */
     .nav_box .nav_links { 
       display: flex !important;
-      position: relative !important;
+      position: static !important;
+      margin: 0 !important;
+      transform: none !important;
       background: transparent !important;
       box-shadow: none !important;
     }
@@ -90,18 +89,17 @@
       display: inline-flex !important; 
       align-items: center !important; 
       gap: 8px !important; 
-      padding: 8px 16px !important; 
       text-decoration: none !important; 
-      font-size: 16px !important;
+      color: inherit !important; 
       font-weight: 600 !important;
-      color: inherit;
-      white-space: nowrap !important;
+      font-size: 16px !important;
     }
 
-    /* === NEW RULE: Justify the About Me paragraph text === */
+    /* SECTION 3 FIX: Justify Paragraph & Add Right Margin */
     .para_aboutme p.description, 
     .para_aboutme p.description_phone {
       text-align: justify !important;
+      margin-right: 30px !important; /* Thoda sa margin badha diya */
     }
   </style>
 </head>
