@@ -34,34 +34,63 @@
   
   <title>Pratik Bairagi - Portfolio</title>
 
-    <style>
-    /* Page-specific override: hide burger on small screens and keep logo + resume visible */
-    @media (max-width: 768px) {
-      .nav_box .burger { display: none !important; }
-      #click { display: none !important; }
-      .nav_box .nav_links {
-        position: absolute !important;
-        transform: none !important;
-        right: 5% !important;
-        top: 0 !important;
-        width: auto !important;
-        display: flex !important;
-        background: transparent !important;
-        padding: 0 !important;
-        box-shadow: none !important;
-      }
-      .nav_box .nav_links a { font-size: 1rem; padding: 10px 12px; }
+  <style>
+    /* Global Desktop & Mobile Nav Layout */
+    .nav_box {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: flex-start !important; 
+      padding: 0 20px !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    
+    .nav_box .logo { 
+      display: block !important;
+      flex: 0 0 auto !important; 
+      margin-right: auto !important; /* This pushes the logo left and the button right */
+    }
+    
+    .nav_box .logo img {
+      display: block !important;
+      max-height: 50px;
+      width: auto;
     }
 
-      /* Ensure spacing between logo and download icon on all viewports for this page */
-    .nav_box {
-      justify-content: space-between !important;
-      padding: 0 20px;
+    /* Override mobile menu behaviors */
+    .nav_box .burger, #click { 
+      display: none !important; 
     }
-    .nav_box .logo { margin-right: 20px; }
-    .nav_box .nav_links { margin-left: auto !important; gap: 18px; align-items: center; }
-    .nav_box .nav_links a.buttonDownload { display: inline-flex; align-items: center; justify-content: center; width:44px; height:44px; border-radius:8px; text-decoration:none; color:inherit; }
-    .nav_box .nav_links a.buttonDownload i { font-size:18px; }
+    
+    .nav_box .nav_links { 
+      display: flex !important;
+      align-items: center !important;
+      position: relative !important;
+      background: transparent !important;
+      box-shadow: none !important;
+      transform: none !important;
+      width: auto !important;
+      padding: 0 !important;
+    }
+    
+    /* New Button Styles to fit Text and Icon */
+    .nav_box .nav_links a.buttonDownload { 
+      display: inline-flex !important; 
+      align-items: center !important; 
+      justify-content: center !important; 
+      gap: 8px !important; /* Spacing between icon and text */
+      padding: 8px 16px !important; 
+      border-radius: 8px !important; 
+      text-decoration: none !important; 
+      color: inherit !important; 
+      font-size: 16px !important;
+      font-weight: 500 !important;
+      white-space: nowrap !important; /* Prevents text from wrapping on small screens */
+    }
+    
+    .nav_box .nav_links a.buttonDownload i { 
+      font-size: 18px !important; 
+    }
   </style>
 </head>
 
@@ -81,7 +110,7 @@
       </label>
       <div class="nav_links">
        <a href="/Pratik-bairagi/assets/Resume.pdf" target="_blank" class="buttonDownload" download title="Download Resume" aria-label="Download Resume">
-          <i class="fas fa-download" aria-hidden="true"></i>
+          <i class="fas fa-download" aria-hidden="true"></i> <span>Download Resume</span>
         </a>
       </div>
     </nav>
