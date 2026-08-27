@@ -35,49 +35,65 @@
   <title>Pratik Bairagi - Portfolio</title>
 
   <style>
-    /* Fixed missing bracket for mobile layout */
+    /* Hide the mobile menu burger entirely */
     @media (max-width: 768px) {
-      .nav_box .burger { display: none !important; }
-      #click { display: none !important; }
-      .nav_box .nav_links {
-        position: absolute !important;
-        transform: none !important;
-        right: 5% !important;
-        top: 0 !important;
-        width: auto !important;
-        display: flex !important;
-        background: transparent !important;
-        padding: 0 !important;
-        box-shadow: none !important;
-      }
-      .nav_box .nav_links a { font-size: 1rem; padding: 10px 12px; }
+      .nav_box .burger, #click { display: none !important; }
     }
 
-    /* Desktop layout */
+    /* Navbar Container */
     .nav_box {
       display: flex !important; 
       justify-content: space-between !important;
       align-items: center !important;
-      padding: 0 20px !important;
+      padding: 15px 40px !important;
       width: 100% !important;
       box-sizing: border-box !important;
     }
-    
-    .nav_box .logo { 
-      margin-left: 0 !important; 
+
+    /* 
+       THE FIX: This stops navbar.css from pushing the logo off the screen!
+       It kills all negative margins, absolute positioning, and transforms.
+    */
+    .nav_box .logo, 
+    .nav_box .logo a { 
+      display: flex !important;
+      align-items: center !important;
+      position: static !important; 
+      margin: 0 !important; 
+      padding: 0 !important;
       transform: none !important; 
+      left: auto !important;
     }
 
-    /* FIX FOR GIANT LOGO: Locks the image to a normal navbar height */
+    /* Keep the logo a normal size */
     .nav_box .logo img { 
-      height: 15px !important; 
-      width: auto !important; 
       display: block !important; 
+      height: 45px !important; 
+      width: auto !important; 
+      position: static !important;
+      margin: 0 !important;
+      transform: none !important;
     }
 
-    .nav_box .nav_links { margin-left: auto !important; gap: 18px; align-items: center; }
-    .nav_box .nav_links a.buttonDownload { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius:8px; text-decoration:none; color:inherit; font-weight: 500;}
-    .nav_box .nav_links a.buttonDownload i { font-size:18px; }
+    /* Keep the Resume button on the right */
+    .nav_box .nav_links { 
+      display: flex !important;
+      position: static !important;
+      margin: 0 !important;
+      transform: none !important;
+      background: transparent !important;
+      box-shadow: none !important;
+    }
+    
+    .nav_box .nav_links a.buttonDownload { 
+      display: inline-flex !important; 
+      align-items: center !important; 
+      gap: 8px !important; 
+      text-decoration: none !important; 
+      color: inherit !important; 
+      font-weight: 600 !important;
+      font-size: 16px !important;
+    }
   </style>
 </head>
 
@@ -86,7 +102,7 @@
   <div class="cursor-dot-outline"></div>
   <div class="cursor-dot"></div>
 
-    <!-- Top bar with logo and resume download button -->
+    <!-- Top bar with fixed logo and Resume button -->
     <nav class="nav_box" data-aos="fade-down" data-aos-duration="700">
       <div class="logo">
         <a href="index.html"><img src="assets/images/logo.png" alt="Portfolio Logo"></a>
