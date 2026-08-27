@@ -35,9 +35,22 @@
   <title>Pratik Bairagi - Portfolio</title>
 
   <style>
-    /* Hide the mobile menu burger entirely */
+    /* Mobile Layout Fixes */
     @media (max-width: 768px) {
+      /* Hide the mobile menu burger entirely */
       .nav_box .burger, #click { display: none !important; }
+      
+      /* FIX: Prevent "My Work Experience" from getting cut off on mobile */
+      .mywork {
+        font-size: 32px !important; /* Scales text down slightly for phones */
+        text-align: center !important; /* Centers the title nicely */
+        width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 15px !important;
+        box-sizing: border-box !important;
+        white-space: normal !important;
+        word-wrap: break-word !important;
+      }
     }
 
     /* Navbar Container */
