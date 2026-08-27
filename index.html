@@ -46,22 +46,28 @@
     }
     
     .nav_box .logo { 
-      display: block !important;
+      display: flex !important;
+      align-items: center !important;
       flex: 0 0 auto !important; 
       margin-right: auto !important; /* Pushes the logo left and the button right */
+      padding: 5px 0 !important;
     }
     
     .nav_box .logo a {
       display: flex !important;
       align-items: center !important;
+      text-decoration: none !important;
     }
     
-    /* Forced sizes to prevent the logo from shrinking out of view */
+    /* Bulletproof Logo Sizing */
     .nav_box .logo img {
       display: block !important;
-      height: 40px !important; 
-      width: auto !important;
-      min-width: 40px !important;
+      height: 45px !important; /* Fixed exact height */
+      min-height: 45px !important; /* Absolutely prevent vertical shrinking */
+      width: auto !important; /* Let the width scale naturally */
+      max-width: 200px !important; /* Safety bound */
+      object-fit: contain !important; /* Guarantee aspect ratio is maintained */
+      flex-shrink: 0 !important; /* Tell Flexbox NEVER to shrink this item */
     }
 
     /* Override mobile menu behaviors */
@@ -80,7 +86,7 @@
       padding: 0 !important;
     }
     
-    /* Button Styles to fit Text and Icon */
+    /* Button Styles */
     .nav_box .nav_links a.buttonDownload { 
       display: inline-flex !important; 
       align-items: center !important; 
