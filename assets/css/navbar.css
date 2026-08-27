@@ -11,10 +11,10 @@ html,
 html *,
 body,
 body * {
-  cursor: none !important;
+    cursor: none !important;
 }
 
-.nav_box{
+.nav_box {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -31,16 +31,16 @@ body * {
 }
 
 .logo {
-   right: 40%;
-   transform: scale(0.2, 0.2);
-   transition: all 0.4s ease;
-   position: relative;
+    right: 40%;
+    transform: scale(0.2, 0.2);
+    transition: all 0.4s ease;
+    position: relative;
 }
 
 .nav_links {
     display: flex;
-    justify-content: flex-end; 
-    gap: 20px; 
+    justify-content: flex-end;
+    gap: 20px;
     width: 45%;
     right: 5%;
     position: absolute;
@@ -65,17 +65,17 @@ body * {
     background: var(--blue-color);
     color: var(--font-hover);
 }
-  
+
 .work:hover {
     background: var(--yellow-color);
     color: var(--font-hover);
 }
-  
+
 .blog:hover {
     background: var(--red-color);
     color: var(--font-hover);
 }
-  
+
 .contact:hover {
     background: var(--green-color);
     color: var(--font-hover);
@@ -85,32 +85,16 @@ body * {
     display: none;
 }
 
-/*.button {
-    border: none;
-    outline: none;
-    background: none;
-    cursor: pointer;
-}
-
-.fa-sun-o {
-    font-size: 22px;
-    color: var(--yellow-color);
-}
-
-.fa-moon-o {
-    font-size: 22px;
-    color: var(--blue-color);
-}*/
-
+/*.button { border: none; outline: none; background: none; cursor: pointer; } .fa-sun-o { font-size: 22px; color: var(--yellow-color); } .fa-moon-o { font-size: 22px; color: var(--blue-color); }*/
 #click {
     display: none;
 }
 
 @media only screen and (max-width: 1440px) {
     .logo {
-       right: 40%;
+        right: 40%;
     }
-    
+
     .nav_links {
         width: 40%;
         top: 0.3;
@@ -157,23 +141,27 @@ body * {
         position: relative;
         overflow-x: hidden !important;
     }
-    #click:checked ~ .burger i:before{
+
+    #click:checked~.burger i:before {
         content: "\f00d";
         color: var(--red-color);
     }
-    
+
     .nav_links {
         position: fixed;
         right: 0px;
         top: 15%;
-        height: auto; /* Shrinks the background box to fit the content */
+        height: auto;
+        /* Shrinks the background box to fit the content */
         width: 77%;
         transform: translateX(100%);
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        gap: 5px; /* Keeps the links close together */
-        padding: 40px 15px 30px 10px; /* Top, Right, Bottom, Left padding */
+        gap: 5px;
+        /* Keeps the links close together */
+        padding: 40px 15px 30px 10px;
+        /* Top, Right, Bottom, Left padding */
         margin: 0px;
         background-color: rgba(245, 245, 245, 1);
         transition: all 0.4s ease-in;
@@ -181,10 +169,10 @@ body * {
         border-radius: 10px;
         z-index: 3;
     }
-    
-    #click:checked ~ .nav_links{
+
+    #click:checked~.nav_links {
         transform: translateX(0%);
-     }
+    }
 
     .nav_links a {
         color: black;
@@ -192,19 +180,20 @@ body * {
         letter-spacing: 3px;
         font-size: 1.5rem;
         font-weight: 600;
-        padding: 5px 8px; /* Reduced vertical padding for tighter links */
+        padding: 5px 8px;
+        /* Reduced vertical padding for tighter links */
         border-radius: 7px;
         display: block;
         transition: all 0.4s ease;
     }
-    
+
     .logo {
         right: 0%;
         top: 0%;
         transform: scale(0.15, 0.15);
         transition: all 0.4s ease;
         z-index: 2;
-     }
+    }
 
     .burger {
         display: block;
@@ -213,7 +202,7 @@ body * {
         color: var(--green-color);
         font-size: 20px;
         position: absolute;
-    }  
+    }
 
     .nav_box {
         width: 95%;
@@ -229,7 +218,7 @@ body * {
     .nav_box {
         width: 93.5%;
     }
-    
+
     .logo {
         right: 2%;
     }
