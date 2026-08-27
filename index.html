@@ -35,7 +35,7 @@
   <title>Pratik Bairagi - Portfolio</title>
 
   <style>
-    /* YOUR ORIGINAL CSS - I only added the missing '}' bracket */
+    /* Mobile Layout Fix */
     @media (max-width: 768px) {
       .nav_box .burger { display: none !important; }
       #click { display: none !important; }
@@ -52,6 +52,29 @@
       }
       .nav_box .nav_links a { font-size: 1rem; padding: 10px 12px; }
     }
+
+    /* Desktop Layout */
+    .nav_box {
+      display: flex !important; 
+      justify-content: space-between !important;
+      align-items: center !important;
+      padding: 0 20px;
+      width: 100%;
+      box-sizing: border-box; /* Keeps everything inside the screen */
+    }
+
+    /* THIS FIXES THE 100% DESKTOP ISSUE */
+    .nav_box .logo { 
+      margin-left: 0 !important; 
+      transform: none !important; 
+      position: static !important;
+    }
+
+    /* Resume Button */
+    .nav_box .nav_links { margin-left: auto !important; gap: 18px; align-items: center; }
+    .nav_box .nav_links a.buttonDownload { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius:8px; text-decoration:none; color:inherit; font-weight: 500;}
+    .nav_box .nav_links a.buttonDownload i { font-size:18px; }
+  </style>
 
     /* Ensure spacing between logo and download icon on all viewports for this page */
     .nav_box {
