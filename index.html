@@ -33,6 +33,26 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   
   <title>Pratik Bairagi - Portfolio</title>
+
+    <style>
+    /* Page-specific override: hide burger on small screens and keep logo + resume visible */
+    @media (max-width: 768px) {
+      .nav_box .burger { display: none !important; }
+      #click { display: none !important; }
+      .nav_box .nav_links {
+        position: absolute !important;
+        transform: none !important;
+        right: 5% !important;
+        top: 0 !important;
+        width: auto !important;
+        display: flex !important;
+        background: transparent !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+      }
+      .nav_box .nav_links a { font-size: 1rem; padding: 10px 12px; }
+    }
+  </style>
 </head>
 
 <body>
