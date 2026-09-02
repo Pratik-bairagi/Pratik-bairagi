@@ -35,14 +35,34 @@
   <title>Pratik Bairagi - Portfolio</title>
 
   <style>
-    /* SOLID LOGO FIX: Stops navbar.css from hiding or moving the logo */
+    /* Hide the mobile menu burger entirely */
+    @media (max-width: 768px) {
+      .nav_box .burger, #click { display: none !important; }
+      
+      /* Prevents "My Work Experience" from getting cut off on mobile */
+      .mywork {
+        font-size: 32px !important; 
+        text-align: center !important; 
+        width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 15px !important;
+        box-sizing: border-box !important;
+        white-space: normal !important;
+        word-wrap: break-word !important;
+      }
+    }
+
+    /* Navbar Container */
     .nav_box {
       display: flex !important; 
       justify-content: space-between !important;
       align-items: center !important;
+      padding: 15px 40px !important;
+      width: 100% !important;
       box-sizing: border-box !important;
     }
-    
+
+    /* SOLID LOGO FIX: Stops navbar.css from hiding or moving the logo */
     .nav_box .logo, 
     .nav_box .logo a { 
       display: flex !important;
@@ -67,11 +87,16 @@
       opacity: 1 !important;
     }
 
-    /* NAV LINKS STYLING */
-    .nav_box .nav_links {
-      display: flex;
-      align-items: center;
-      gap: 20px;
+    /* Keep the Resume button and links styled */
+    .nav_box .nav_links { 
+      display: flex !important;
+      align-items: center !important;
+      position: static !important;
+      margin: 0 !important;
+      transform: none !important;
+      background: transparent !important;
+      box-shadow: none !important;
+      gap: 20px !important;
     }
     
     .nav_box .nav_links a {
@@ -79,7 +104,7 @@
       font-weight: 500;
       color: inherit;
     }
-    
+
     .nav_box .nav_links a.buttonDownload { 
       display: inline-flex !important; 
       align-items: center !important; 
@@ -108,20 +133,6 @@
     .para_myskills p.description_skills {
       padding-bottom: 20px !important;
     }
-
-    /* MOBILE FIX FOR "MY WORK EXPERIENCE" TITLE */
-    @media (max-width: 768px) {
-      .mywork {
-        font-size: 32px !important; 
-        text-align: center !important; 
-        width: 100% !important;
-        margin: 0 auto !important;
-        padding: 0 15px !important;
-        box-sizing: border-box !important;
-        white-space: normal !important;
-        word-wrap: break-word !important;
-      }
-    }
   </style>
 </head>
 
@@ -139,14 +150,12 @@
       <label for="click" class="burger">
         <i class="fas fa-bars" aria-hidden="true"></i>
       </label>
-      
-      <!-- ADDED NAVIGATION LINKS HERE -->
       <div class="nav_links">
-       <a href="#about">About</a>
+       <a href="assets/html/about.html">About</a>
        <a href="#skills">Skills</a>
-       <a href="#work">Experience</a>
-       <a href="#blogs">Blogs</a>
-       <a href="#contact">Contact</a>
+       <a href="assets/html/work.html">Experience</a>
+       <a href="assets/html/blog.html">Blogs</a>
+       <a href="assets/html/contact.html">Contact</a>
        <a href="assets/Resume.pdf" target="_blank" class="buttonDownload" download title="Download Resume" aria-label="Download Resume">
           <span>Resume</span> <i class="fas fa-download" aria-hidden="true"></i> 
         </a>
@@ -228,7 +237,6 @@
     </div>
   </div>
 
-  <!-- ADDED ID="about" TO LINK NAVBAR -->
   <div class="section3" id="about">
     <div data-aos="fade-left" data-aos-once="true" class="aboutme">
       <span class="text-wrapper">
@@ -265,7 +273,6 @@
     </div>
   </div>
 
-  <!-- ADDED ID="skills" TO LINK NAVBAR -->
   <div class="section4" id="skills">
     <div data-aos="fade-right" data-aos-once="true" class="myskills">
       <span class="text-wrapper">
@@ -308,7 +315,6 @@
   </div>
   </div>
 
-  <!-- ADDED ID="work" TO LINK NAVBAR -->
   <div class="section5" id="work">
     <div class="content5">
       <div data-aos="fade-right" data-aos-once="true" class="mywork">My Work Experience</div>
@@ -455,7 +461,6 @@
     </svg>
   </div>
 
-  <!-- ADDED ID="blogs" TO LINK NAVBAR -->
   <div class="section6" id="blogs">
   
     <div data-aos="fade-right" data-aos-duration="700" data-aos-once="true" class="blogs">
@@ -553,7 +558,6 @@
    </div>
   </div>
 
-  <!-- ADDED ID="contact" TO LINK NAVBAR -->
   <div class="section7" id="contact">
 
     <div class="contactme_title" data-aos="fade-left" data-aos-once="true">
